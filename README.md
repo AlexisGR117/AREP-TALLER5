@@ -1,4 +1,4 @@
-# TALLER 5: TALLER DE DE MODULARIZACIÓN CON VIRTUALIZACIÓN E INTRODUCCIÓN A DOCKER
+# TALLER 5: TALLER DE MODULARIZACIÓN CON VIRTUALIZACIÓN E INTRODUCCIÓN A DOCKER
 
 Aplicación web pequeña que usa el micro-framework de Spark java (http://sparkjava.com/). Con la aplicaicón se crea un container para docker, se desplega y se configura en la máquina local. Luego, se crea un repositorio en DockerHub y se sube la imagen al repositorio.
 
@@ -55,7 +55,7 @@ La aplicación es una web app simple desarrollada con el micro-framework Spark J
 
 **Salida:** La API debe devolver una respuesta HTTP 200 con el contenido de la página web.
 
-![Caso1.png](img/Caso1.png)
+![Caso1.png](img/Caso1.PNG)
 
 Se realizó la petición a http://localhost:35002/calculadora la cual obtuvo como respuesta exitosa el contenido de la página web.
 
@@ -67,7 +67,7 @@ Se realizó la petición a http://localhost:35002/calculadora la cual obtuvo com
 
 **Salida:** Se deben mostrar los diferentes resultados de los cálculos correctamente.
 
-![Caso2.png](img/Caso2.png)
+![Caso2.png](img/Caso2.PNG)
 
 Se realizaron las peticiones GET para cada uno de los cáculos al ingresar los valores correspondientes y oprimir los botones calcular, de esto se obtuvo como respuesta exitosa los resultados de los diferentes cálculos.
 
