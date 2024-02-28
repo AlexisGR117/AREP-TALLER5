@@ -14,11 +14,79 @@ Estas instrucciones te ayudarán a obtener una copia del proyecto en funcionamie
 
 ### Instalando
 
-1. Crear un nuevo contenedor a partir de la imagen que etsá en Docker Hub:
+1. Asegúrate de tener Docker instalado en su máquina y que docker daemon esté ejecutándose.
+2. Descargar la imagen de Docker del repositorio (opcional):
+    ```
+    docker pull alexisgr117/firstsprkwebapprepo:latest
+    ```
+    
+    ![DockerHub.PNG](img/DockerHub.PNG)
+3. Verifica que la imagen se haya creado correctamente ejecutando el siguiente comando:
+    ```
+    docker images
+    ```
+   debe verse algo así:
+
+   ![DockerImagesHub.PNG](img/DockerImagesHub.PNG)
+   
+   También se puede hacer la verificación a través de Docker Desktop:
+
+   ![DockerDImages.PNG](img/DockerDImages.PNG)
+4. Crear un nuevo contenedor a partir de la imagen que está en Docker Hub:
     ```
     docker run -d -p 35002:6000 --name dockercontainerspark alexisgr117/firstsprkwebapprepo
     ```
-2. Abre un navegador web y accede a la aplicación en http://localhost:35002/calculadora.
+5. Asegúrese que el contenedor está corriendo
+    ```
+    docker ps
+    ```
+   debe verse algo así:
+
+   ![DockerPSHub.PNG](img/DockerPSHub.PNG)
+
+   También se puede hacer la verificación a través de Docker Desktop:
+
+   ![DockerContainers.PNG](img/DockerContainers.PNG)
+6. Abre un navegador web y accede a la aplicación en http://localhost:35002/calculadora.
+
+### Generar las imágenes
+
+1. Asegúrate de tener Docker instalado en su máquina y que docker daemon esté ejecutándose.
+2. Clona el repositorio:
+    ```
+    git clone https://github.com/AlexisGR117/AREP-TALLER5.git
+    ```
+3. Navega a la carpeta del proyecto:
+    ```
+    cd AREP-TALLER4
+    ```
+4. Construye el proyecto usando Maven:
+    ```
+    mvn clean install 
+    ```
+5. Usando la herramienta de línea de comandos de Docker construye la imagen (Reemplace <nombre-imagen> con el nombre que desea darle a la imagen):
+    ```
+    docker build --tag <nombre-imagen> .
+    ```
+6. Verifica que la imagen se haya creado correctamente ejecutando el siguiente comando:
+    ```
+    docker images
+    ```
+   debe verse algo así:
+
+   ![DockerImages.png](img/DockerImages.png)
+7. Ya si se desea crear un contenedor con la imágen (Reemplace <nombre-contenedor> y <nombre-imagen> con el nombre que desea darle al contenedor y el nombre de la imagen que se creó previamente):
+    ```
+    docker run -d -p 35002:6000 --name <nombre-contenedor> <nombre-imagen>
+    ```
+8. Asegúrese que el contenedor está corriendo
+    ```
+    docker ps
+    ```
+   debe verse algo así:
+
+   ![DockerPS.png](img/DockerPS.png)
+9. Abre un navegador web y accede a la aplicación en http://localhost:35002/calculadora.
 
 ## Arquitectura
 
@@ -42,8 +110,6 @@ La aplicación es una web app simple desarrollada con el micro-framework Spark J
 3. Docker:
    - Se utiliza para empaquetar la aplicación en un contenedor estandarizado.
    - El Dockerfile define las instrucciones para construir la imagen del contenedor, incluyendo las dependencias y la configuración de la aplicación.
-
-## Generar las imágenes
 
 ## Evaluación
 
