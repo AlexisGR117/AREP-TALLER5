@@ -88,6 +88,14 @@ Estas instrucciones te ayudarán a obtener una copia del proyecto en funcionamie
    ![DockerPS.png](img/DockerPS.png)
 9. Abre un navegador web y accede a la aplicación en http://localhost:35002/calculadora.
 
+
+### Ejecutando las pruebas
+
+Ejecuta las pruebas unitarias:
+```
+mvn test
+```
+
 ## Arquitectura
 
 La aplicación es una web app simple desarrollada con el micro-framework Spark Java y posteriormente contenerizada en Docker. Se compone de los siguientes componentes:
