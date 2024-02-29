@@ -58,7 +58,7 @@ Estas instrucciones te ayudarán a obtener una copia del proyecto en funcionamie
     ```
 3. Navega a la carpeta del proyecto:
     ```
-    cd AREP-TALLER4
+    cd AREP-TALLER5
     ```
 4. Construye el proyecto usando Maven:
     ```
